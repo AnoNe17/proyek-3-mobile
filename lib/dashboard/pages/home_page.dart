@@ -266,7 +266,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "JAM 1",
+                          "SELAMAT DATANG",
                           style: TextStyle(
                               fontWeight: FontWeight.w900,
                               fontSize: 30,
@@ -279,7 +279,7 @@ class _HomePageState extends State<HomePage> {
                           height: 10,
                         ),
                         Text(
-                          "PATENI LEDENG !!!",
+                          "Maulana Hidayatullah",
                           style: TextStyle(
                               fontWeight: FontWeight.w900,
                               fontSize: 25,
@@ -303,16 +303,34 @@ class _HomePageState extends State<HomePage> {
                       mainAxisSpacing: 20,
                       children: <Widget>[
                         CategoryCard(
-                          title: "Profil Sekolah",
+                          title: "Apa itu PAUD ?",
                           gambarSrc: "assets/icon/school.png",
                           press: () {
                             AwesomeDialog(
                               context: context,
-                              dialogType: DialogType.NO_HEADER,
-                              animType: AnimType.SCALE,
-                              headerAnimationLoop: true,
-                              title: 'Kien Profil Sekolah',
-                              // desc: 'NIS atau Password Salah !',
+                              body: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'PAUD',
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(15),
+                                      child: Text(
+                                        '     Pendidikan Anak Usia Dini (PAUD) adalah jenjang pendidikan sebelum jenjang pendidikan dasar yang merupakan suatu upaya pembinaan yang ditujukan bagi anak sejak lahir sampai dengan usia enam tahun yang dilakukan melalui pemberian rangsangan pendidikan untuk membantu pertumbuhan dan perkembangan rohani dan jasmani agar anak memiliki kesiapan dalam memasuki pendidikan lebih lanjut, yang diselenggarakan pada jalur formal, nonformal, dan informal.',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                        ),
+                                        textAlign: TextAlign.justify,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               btnOkOnPress: () {},
                               btnOkIcon: Icons.check_circle,
                               btnOkColor: Colors.blue,
@@ -320,16 +338,45 @@ class _HomePageState extends State<HomePage> {
                           },
                         ),
                         CategoryCard(
-                          title: "Visi Misi",
+                          title: "Tujuan PAUD",
                           gambarSrc: "assets/icon/medal.png",
                           press: () {
                             AwesomeDialog(
                               context: context,
-                              dialogType: DialogType.NO_HEADER,
-                              animType: AnimType.SCALE,
-                              headerAnimationLoop: true,
-                              title: 'Kien Visi Misi',
-                              // desc: 'NIS atau Password Salah !',
+                              body: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'TUJUAN',
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(15),
+                                      child: Text(
+                                        ' - Tujuan utama: untuk membentuk anak Indonesia yang berkualitas, yaitu anak yang tumbuh dan berkembang sesuai dengan tingkat perkembangannya sehingga memiliki kesiapan yang optimal di dalam memasuki pendidikan dasar serta mengarungi kehidupan pada masa dewasa.',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 15, bottom: 15, right: 15),
+                                      child: Text(
+                                        ' - Tujuan penyerta: untuk membantu menyiapkan anak mencapai kesiapan belajar (akademik) di sekolah, sehingga dapat mengurangi usia putus sekolah dan mampu bersaing secara sehat di jenjang pendidikan berikutnya.',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               btnOkOnPress: () {},
                               btnOkIcon: Icons.check_circle,
                               btnOkColor: Colors.blue,
@@ -340,14 +387,14 @@ class _HomePageState extends State<HomePage> {
                           title: "Lokasi",
                           gambarSrc: "assets/icon/map.png",
                           press: () {
-                            ModelMaps.openMap(-6.469000, 108.297211);
+                            ModelMaps.openMap(-6.3617821, 108.3658955);
                           },
                         ),
                         CategoryCard(
                           title: "Hubungi",
                           gambarSrc: "assets/icon/phone.png",
                           press: () async {
-                            launch('tel:0895636598769');
+                            launch('tel:+6287727775550');
                           },
                         ),
                       ],

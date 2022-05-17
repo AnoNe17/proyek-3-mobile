@@ -69,17 +69,17 @@ class MenuPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "TK",
+                    "PAUD",
                     style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 28,
                         letterSpacing: 2,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
                   const Text(
-                    "GARUDA",
+                    "SOKA INDAH",
                     style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 23,
                         letterSpacing: 2,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
