@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import '../../models/menu_item.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import '../../login/login.dart';
 
 class MenuItems {
   static const home = MenuItem('Home', Icons.home);
@@ -60,8 +61,8 @@ class MenuPage extends StatelessWidget {
             // ),
             //Gambar Logo
             SizedBox(
-                width: 180,
-                height: 180,
+                width: 160,
+                height: 160,
                 child: Image.asset('assets/logo_tk.png')),
             Container(
               margin: EdgeInsets.only(left: we * 0.05),
@@ -125,7 +126,10 @@ class MenuPage extends StatelessWidget {
                     desc: 'Apakah Anda Yakin ?',
                     showCloseIcon: true,
                     btnCancelOnPress: () {},
-                    btnOkOnPress: () {},
+                    btnOkOnPress: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Login()));
+                    },
                   ).show();
                 },
               ),
