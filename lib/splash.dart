@@ -37,7 +37,7 @@ class _SplashState extends State<Splash> {
               height: 300,
             ),
             Text(
-                'SISTEM INFORMASI HASIL BELAJAR ANAK\n\n\nTK GARUDAssassssd\n\n\n',
+                'SISTEM INFORMASI HASIL BELAJAR ANAK\n\n\nPAUD SOKA INDAH\n\n\n',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25,
