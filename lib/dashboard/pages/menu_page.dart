@@ -107,7 +107,7 @@ class MenuPage extends StatelessWidget {
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                 ),
-                label: Text('Keluar'),
+                label: Text('Logout'),
                 icon: Icon(Icons.logout),
                 onPressed: () {
                   AwesomeDialog(
