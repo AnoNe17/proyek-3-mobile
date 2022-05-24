@@ -2,14 +2,13 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-const String baseURL =
-    "https://proyek3kel6.000webhostapp.com/api/"; //emulator localhost
+const String baseURL = "http://192.168.0.108/api/"; //emulator localhost
 const Map<String, String> headers = {"Content-Type": "application/json"};
 
 class Http {
-  static Future<http.Response> login(String nis, String password) async {
+  static Future<http.Response> login(String username, String password) async {
     Map data = {
-      "nis": nis,
+      "username": username,
       "password": password,
     };
     var body = json.encode(data);

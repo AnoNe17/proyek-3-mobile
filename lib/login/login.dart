@@ -16,10 +16,10 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   bool _loading = false;
-  String _nis = '';
+  String _username = '';
   String _password = '';
   final formKey = GlobalKey<FormState>();
-  TextEditingController txNis = new TextEditingController();
+  TextEditingController txUsername = new TextEditingController();
   TextEditingController txPass = new TextEditingController();
 
   // Loading Dialog
@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
     if (_loading = true) {
       _showMyDialog();
       try {
-        http.Response response = await Http.login(_nis, _password);
+        http.Response response = await Http.login(_username, _password);
         Map responseMap = jsonDecode(response.body);
 
         if (response.statusCode == 200) {
@@ -81,13 +81,13 @@ class _LoginState extends State<Login> {
             dialogType: DialogType.ERROR,
             animType: AnimType.SCALE,
             headerAnimationLoop: true,
-            title: 'NIS atau Password Salah !',
-            // desc: 'NIS atau Password Salah !',
+            title: 'Username atau Password Salah !',
+            // desc: 'Username atau Password Salah !',
             btnOkOnPress: () {},
             btnOkIcon: Icons.cancel,
             btnOkColor: Colors.red,
           ).show();
-          txNis.text = "";
+          txUsername.text = "";
           txPass.text = "";
         }
       } catch (e) {}
@@ -111,7 +111,7 @@ class _LoginState extends State<Login> {
                 margin: EdgeInsets.symmetric(horizontal: 40),
                 child: TextFormField(
                   keyboardType: TextInputType.number,
-                  controller: txNis,
+                  controller: txUsername,
                   style: TextStyle(
                     fontSize: 18,
                   ),
@@ -119,17 +119,17 @@ class _LoginState extends State<Login> {
                   autofocus: true,
                   decoration: InputDecoration(
                     icon: Icon(Icons.person),
-                    labelText: 'Masukan NIS',
+                    labelText: 'Masukan Username',
                   ),
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return "NIS tidak boleh Kosong";
+                      return "Username tidak boleh Kosong";
                     } else {
                       return null;
                     }
                   },
                   onChanged: (value) {
-                    _nis = value;
+                    _username = value;
                   },
                 ),
               ),
