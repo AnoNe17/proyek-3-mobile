@@ -1,5 +1,7 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:proyek3_mobile/services/http.dart';
+import 'package:proyek3_mobile/services/model_data/profil.dart';
 import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
 // import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -17,6 +19,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Profil profil = Profil();
+
+  @override
+  initState() {
+    super.initState();
+
+    Http.getProfil().then((value) {
+      // Add listeners to this class
+      setState(() {
+        profil = value;
+      });
+    });
+  }
+
   Widget _menuDashboard({@required IconData? icon, @required String? nama}) {
     return Container(
       decoration: BoxDecoration(
@@ -279,7 +295,7 @@ class _HomePageState extends State<HomePage> {
                           height: 10,
                         ),
                         Text(
-                          "Maulana Hidayatullah",
+                          "${profil.nama}",
                           style: TextStyle(
                               fontWeight: FontWeight.w900,
                               fontSize: 25,

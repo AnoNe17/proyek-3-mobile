@@ -1,0 +1,36 @@
+class Profil {
+  String? id,
+      kelompok,
+      nama = "Nama",
+      nama_panggilan,
+      no_induk,
+      tanggal_lahir,
+      jenis_kelamin,
+      agama,
+      anak_ke,
+      tanggal_diterima,
+      nama_wali,
+      pekerjaan_wali,
+      no_telp,
+      alamat,
+      nama_kelompok,
+      umur_kelompok;
+
+  Profil(
+      {this.id,
+      this.kelompok,
+      this.nama,
+      this.nama_panggilan,
+      this.no_induk,
+      this.tanggal_lahir,
+      this.jenis_kelamin,
+      this.agama,
+      this.anak_ke,
+      this.tanggal_diterima,
+      this.nama_wali,
+      this.pekerjaan_wali,
+      this.no_telp,
+      this.alamat,
+      this.nama_kelompok,
+      this.umur_kelompok});
+}
