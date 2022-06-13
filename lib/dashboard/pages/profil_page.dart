@@ -32,66 +32,66 @@ class _ProfilPageState extends State<ProfilPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.green,
-          title: Text("Halaman Profil"),
-          leading: MenuWidget(),
-        ),
-        body: LayoutBuilder(
-          builder: (context, constraint) {
-            return SingleChildScrollView(
-                child: Column(
-              children: [
-                SizedBox(
-                  height: 20,
-                ),
-                _profileName("Muhammad Kurnia Pamungkas"),
-                SizedBox(
-                  height: 20,
-                ),
-                ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraint.maxHeight),
-                  child: IntrinsicHeight(
-                    child: Column(
-                      children: <Widget>[
-                        // _getHeader(),
-                        _detailsCard("No. Induk", "${profil.no_induk}",
-                            Icons.account_box),
-                        _detailsCard("Nama Panggilan",
-                            "${profil.nama_panggilan}", Icons.person),
-                        _detailsCard("Nama Kelompok", "${profil.nama_kelompok}",
-                            Icons.badge),
-                        _detailsCard("Kelompok Umur", "${profil.umur_kelompok}",
-                            Icons.ac_unit),
-                        _detailsCard("Tanggal Lahir", "${profil.tanggal_lahir}",
-                            Icons.calendar_today),
-                        _detailsCard("Jenis Kelamin", "${profil.jenis_kelamin}",
-                            Icons.accessibility),
-                        _detailsCard("Agama", "${profil.agama}", Icons.person),
-                        _detailsCard(
-                            "Anak Ke", "${profil.anak_ke}", Icons.person),
-                        _detailsCard("Tanggal Diterima",
-                            "${profil.tanggal_diterima}", Icons.person),
-                        _detailsCard(
-                            "Nama Wali", "${profil.nama_wali}", Icons.person),
-                        _detailsCard("Pekerjaan Wali",
-                            "${profil.pekerjaan_wali}", Icons.person),
-                        _detailsCard(
-                            "No Telp", "${profil.no_telp}", Icons.person),
-                        _detailsCard(
-                            "Alamat", "${profil.alamat}", Icons.person),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
-                    ),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.green,
+        title: Text("Halaman Profil"),
+        leading: MenuWidget(),
+      ),
+      body: LayoutBuilder(
+        builder: (context, constraint) {
+          return SingleChildScrollView(
+              child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              _profileName("${profil.nama}"),
+              SizedBox(
+                height: 20,
+              ),
+              ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraint.maxHeight),
+                child: IntrinsicHeight(
+                  child: Column(
+                    children: <Widget>[
+                      // _getHeader(),
+                      _detailsCard(
+                          "No. Induk", "${profil.no_induk}", Icons.account_box),
+                      _detailsCard("Nama Panggilan", "${profil.nama_panggilan}",
+                          Icons.person),
+                      _detailsCard("Nama Kelompok", "${profil.nama_kelompok}",
+                          Icons.badge),
+                      _detailsCard("Kelompok Umur", "${profil.umur_kelompok}",
+                          Icons.ac_unit),
+                      _detailsCard("Tanggal Lahir", "${profil.tanggal_lahir}",
+                          Icons.calendar_today),
+                      _detailsCard("Jenis Kelamin", "${profil.jenis_kelamin}",
+                          Icons.accessibility),
+                      _detailsCard("Agama", "${profil.agama}", Icons.person),
+                      _detailsCard(
+                          "Anak Ke", "${profil.anak_ke}", Icons.person),
+                      _detailsCard("Tanggal Diterima",
+                          "${profil.tanggal_diterima}", Icons.person),
+                      _detailsCard(
+                          "Nama Wali", "${profil.nama_wali}", Icons.person),
+                      _detailsCard("Pekerjaan Wali", "${profil.pekerjaan_wali}",
+                          Icons.person),
+                      _detailsCard(
+                          "No Telp", "${profil.no_telp}", Icons.person),
+                      _detailsCard("Alamat", "${profil.alamat}", Icons.person),
+                      SizedBox(
+                        height: 10,
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ));
-          },
-        ));
+              ),
+            ],
+          ));
+        },
+      ),
+    );
   }
 
   Widget _getHeader() {

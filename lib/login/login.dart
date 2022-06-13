@@ -61,7 +61,7 @@ class _LoginState extends State<Login> {
       _showMyDialog();
       try {
         http.Response response = await Http.login(_username, _password);
-        Map responseMap = jsonDecode(response.body);
+        // Map responseMap = jsonDecode(response.body);
 
         if (response.statusCode == 200) {
           setState(() {
